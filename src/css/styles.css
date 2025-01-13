@@ -12,6 +12,25 @@ ul {
   padding-left: 0;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #2e2f42;
+  background-color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
 /* header css */
 
 .header {
@@ -62,10 +81,9 @@ ul {
 /* Back link styles */
 
 .back-link {
-  position: relative;
   display: inline-block;
   padding: 4px 8px;
-  margin-top: 32px;
+  margin: 32px 16px;
   border: 1px solid;
   border-radius: 8px;
 }
@@ -115,20 +133,17 @@ ul {
   width: 75px;
   height: 40px;
   background: #4e75ff;
-  font-weight: 500;
+
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  font-family: inherit;
   color: #fff;
   border: none;
   display: block;
   transition: background-color 0.1s ease;
 }
 
-.start-btn:hover {
-  background-color: #4e75ff;
-  color: #fff;
-}
 .start-btn:disabled {
   background-color: #cfcfcf;
   color: #989898;
@@ -159,18 +174,51 @@ ul {
   color: #2e2f42;
 }
 
-/* textarea {
-  height: 80px;
-  resize: none;
-}
+/* Snackbar css */
 
-.feedback-form {
+.form {
   display: flex;
   flex-direction: column;
+  gap: 16px;
+  max-width: 360px;
+  margin: 36px 156px;
+}
+.form-label-delay {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  margin-top: 8px;
+  border: 1px solid #808080;
+  border-radius: 4px;
   width: 360px;
-  margin: 0 auto;
-  padding-top: 24px;
-} */
+  height: 40px;
+}
+fieldset {
+  border-radius: 4px;
+  stroke-width: 1px;
+  stroke: #808080;
+}
+.state-radio-inputs-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.submit-btn {
+  display: block;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  background: #4e75ff;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  font-family: inherit;
+}
 
 /* Common styles */
 @import url('./reset.css');
