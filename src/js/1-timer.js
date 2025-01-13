@@ -41,6 +41,7 @@ const onStartBtn = event => {
   timer.deadline = userSelectedDate;
   timer.start();
   startBtn.disabled = true;
+  dateTimePicker.disabled = true;
 };
 
 startBtn.addEventListener('click', onStartBtn);
@@ -80,6 +81,9 @@ const timer = {
 
   stop() {
     clearInterval(this.intervalId);
+
+    dateTimePicker.disabled = false;
+    startBtn.disabled = true;
   },
 
   convertMs(ms) {
