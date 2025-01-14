@@ -3,6 +3,7 @@ import flatpickr from 'flatpickr';
 import iziToast from 'izitoast';
 
 const startBtn = document.querySelector('[data-start]');
+const dateTimePicker = document.querySelector('#datetime-picker');
 startBtn.disabled = true;
 
 let userSelectedDate = null;
@@ -32,7 +33,7 @@ const options = {
   },
 };
 
-flatpickr('#datetime-picker', options);
+flatpickr(dateTimePicker, options);
 
 const onStartBtn = event => {
   if (!userSelectedDate) {
